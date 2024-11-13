@@ -1,11 +1,11 @@
 import React from "react";
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "@/pages/HomePage";
-import LoginPage from "@/pages/LoginPage";
-import SignUpPage from "@/pages/SignUpPage";
-import PanelPage from "@/pages/PanelPage";
-import ProductsPage from "@/pages/ProductsPage";
-import ProductPage from "@/pages/ProductPage";
+import HomePage from "@pages/HomePage";
+import LoginPage from "@pages/LoginPage";
+import SignUpPage from "@pages/SignUpPage";
+import PanelPage from "@pages/PanelPage";
+import ProductsPage from "@pages/ProductsPage";
+import ProductPage from "@pages/ProductPage";
 
 interface RouteObject {
   path: string;
