@@ -5,6 +5,11 @@
 @tailwind utilities;
 
 /* global */
+* {
+  text-align: right;
+}
+
 body {
   font-family: Vazirmatn;
+  background-color: #F4F5F6;
 }

@@ -1,6 +1,7 @@
-import { Input, Button } from "@headlessui/react";
+import CInput from "@/components/CInput";
+import CButton from "@/components/CButton";
 // images
-import banner from "../assets/images/login-banner.jpg";
+import banner from "../assets/images/login-banner.png";
 import logo from "/logo.svg";
 
 export default function SignUpPage() {
@@ -8,21 +9,53 @@ export default function SignUpPage() {
     console.log("signUp");
   }
   return (
-    <div className="flex container h-full items-center gap-x-6">
+    <div className="flex container min-h-screen items-center gap-x-6">
       <div className="basis-1/2">
         <img src={banner} alt="banner" />
       </div>
       <div className="basis-1/2 bg-slate-600">
         <img src={logo} alt="logo" className="mx-auto mb-6" />
-        <h4 className="text-center text-base text-neutral-800 font-bold mb-6">ثبت نام</h4>
+        <h4 className="text-center text-base text-neutral-800 font-bold mb-6">
+          ثبت نام
+        </h4>
 
         <form className="flex flex-col" onSubmit={signUpHandler}>
-          <Input name="first_name" type="text" placeholder="نام" className="mb-6" />
-          <Input name="last_name" type="text" placeholder="نام خانوادگی" className="mb-6" />
-          <Input name="email" type="email" placeholder="ایمیل" className="mb-6" />
-          <Input name="password" type="password" placeholder="رمز عبور" className="mb-6" />
-          <Button type="submit">ادامه</Button>
+          <CInput
+            name="first_name"
+            type="text"
+            placeholder="نام"
+            className="mb-6"
+          />
+          <CInput
+            name="last_name"
+            type="text"
+            placeholder="نام خانوادگی"
+            className="mb-6"
+          />
+          <CInput
+            name="email"
+            type="email"
+            placeholder="ایمیل"
+            className="mb-6"
+          />
+          <CInput
+            name="password"
+            type="password"
+            placeholder="رمز عبور"
+            className="mb-6"
+          />
+          <CButton
+            type="submit"
+            text="ادامه"
+            round="md"
+            className="bg-primary-400 py-4 w-3/4 mx-auto text-xl text-neutral mb-6"
+          />
         </form>
+
+        <div className="flex justify-center">
+          <CButton text="ورود" className="text-primary-500 mr-1" />
+          <p className="text-neutral-800">اکانت دارید؟</p>
+        </div>
       </div>
     </div>
   );
